@@ -1,0 +1,24 @@
+Sección,Subsección,Objetivo,Aplica a Proyecto,Definido por,ID_Pregunta,Pregunta,Descripción/Contexto,Status (Roiback),Respuesta (Roiback)
+Gobierno del dato,Descubrimiento y clasificación,Estrategia Sensitive Data Protection,No Aplica,Cliente,GD-1.1,"¿Qué tipos de datos sensibles (DNI, Tarjetas, Emails, etc.) maneja la organización?",Identificación de InfoTypes para configuración de SDP.,,
+,,,,Cliente,GD-1.2,¿Con qué frecuencia se deben escanear los datos en busca de PII?,Definición de frecuencia de escaneo (continuo vs semanal).,,
+,,,,Cliente,GD-1.3,¿Quién debe ser notificado si se detecta PII en entornos no autorizados?,Grupo de seguridad responsable de alertas SDP.,,
+,Gestión de metadatos y catálogo,"Dataplex (Glosario, Catálogo, Reglas de Calidad, etc.) + Data Lineage",Aplica,Cliente,GD-1.4,"¿Qué activos (GCS, Pub/Sub, etc.) deben indexarse en el catálogo?",Alcance de la indexación en Dataplex.,NOT NECESSARY,
+,,,,Cliente,GD-1.5,"¿Qué metadatos de negocio son obligatorios (Owner, Criticidad, Dominio, etc.)?",Definición de Aspect Types para el catálogo de datos.,IN PROGRESS,
+,,,,Cliente,GD-1.6,¿Cómo se deben agrupar lógicamente los activos (definición de Dominios y Subdominios)?,Organización del catálogo por dominio o sistema.,IN PROGRESS,
+,Glosario de negocio,,,Cliente,GD-1.7,¿Cuáles son los términos de negocio críticos y sus definiciones?,Alimentación del glosario empresarial de Dataplex.,TO DO (with DVT Recomendation),
+,,,,Cliente,GD-1.8,¿Quiénes actuarán como Data Stewards/Data Owners para validar el glosario?,"Responsables de la veracidad semántica del dato.
+Data Steward es la figura operativa (responsible) que ejecuta y mantiene la estrategia dictada por el Data Owner. Suelen ser perfiles más técnicos, como ingenieros de datos, analistas avanzados o expertos en gobierno de datos, que conocen cómo fluye la información.
+Data Owner es la figura responsable a nivel de negocio (accountable) del activo de datos. Suele ser un líder de dominio o departamento (por ejemplo, el Director de Marketing es el propietario de los datos de campañas publicitarias).",IN PROGRESS,
+,Linaje de datos,,,Cliente,GD-1.9,"¿Qué herramienta centralizará la visualización del linaje? (dbt, dataform, BigQuery, etc.) ¿Se requiere linaje a nivel de columna para datos críticos y PII?","Data Lineage API, dbt, dataform, u otra herramienta de terceros.",DONE,Dataform
+,Calidad del dato,,,Cliente,GD-1.10,¿Qué umbrales de alerta se consideran aceptables para nulos o volumen?,Configuración de perfilado estadístico.,,
+,,,,Cliente,GD-1.11,"¿Se quiere implementar reglas de calidad del dato (detección de nulos, comparación de fechas, patrones de campos -email,dni-, etc.)?",Configuración de reglas de calidad a nivel genérico.,IN PROGRESS,Depende del caso de uso
+,,,,Cliente,GD-1.12,"¿Qué acciones deben automatizarse ante fallos de calidad si se ha decidido implementar (alerta y notificación, detención de la orquestación, cuarentena o rnrutamiento de datos defectuosos - apartandolos de las tablas originales)?",Protocolo de respuesta ante errores de validación.,IN PROGRESS,TBD (tabla/dashboard/slack)
+,,,,Cliente,GD-1.13,"¿Cuáles son los SLAs de frescura requeridos por cada dominio para las reglas de calidad?, en caso de que esté fuera del ELT orquestado.",Tiempo máximo desde evento hasta disponibilidad.,IN PROGRESS,TBD
+,,,,Cliente,GD-1.14,% de registros con campos obligatorios informados. Acción a tener en cuenta,"En Data Quality, % de aceptación.
+En Data Profiling, % de población de datos.",IN PROGRESS,TBD
+,Ciclo de vida,Políticas Ciclo de Vida del dato,No Aplica,Cliente,GD-1.15,"¿Cuál es el período de retención legal para cada capa de datos (bronze, silver, gold, etc.)?",Definición de políticas de retención y borrado.,,
+,,,,Cliente,GD-1.16,¿Se quiere implementar política de borrado del dato? ¿A partir de qué antigüedad?,Políticas de borrado por cumplimiento normativo.,,
+,,,,Cliente,GD-1.17,¿A partir de qué antigüedad se deben mover los datos a Cold Storage para auditorías?,Movimiento de datos para auditorías y optimización de costes de almacenamiento.,,
+,,,,Cliente,GD-1.18,"¿Se requiere realizar backups? ¿snapshots, DR? ¿Cada cuanto?",Estrategia protección y recuperación de datos.,,
+,Cumplimiento y normativa,Cumplimiento y normativas,Aplica,Cliente/DVT,GD-1.19,"¿Residencia y soberanía del dato (multiregión: US, EU, región concreta)?",Residencia de los datos en GCP.,DONE,EU (multirregion)
+,,,,Cliente/DVT,GD-1.20,"¿Leyes o estándares exigibles por contrato (ej. RGPD -Reglamento General de Protección de Datos-, DORA - Digital Operational Resilience Act, establece requisitos estrictos de ciberseguridad-), etc.?",Leyes o estándares a cumplir,TO DO (with DVT Recomendation),

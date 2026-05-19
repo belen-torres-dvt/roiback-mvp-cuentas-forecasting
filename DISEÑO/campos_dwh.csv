@@ -1,0 +1,505 @@
+tabla,columna_raiz,ruta_campo_exacto,tipo_dato,descripcion
+accounts,Account_Name,Account_Name,STRING,Nombre de la cuenta del hotel o cadena.
+accounts,Account_Owner,Account_Owner,STRING,Propietario o responsable de la cuenta.
+accounts,DCS_Manager,DCS_Manager,STRING,Gerente de Servicios al Cliente (DCS) asociado a la cuenta.
+accounts,Destino_RB,Destino_RB,STRING,Destino o ubicación del hotel según Roiback.
+accounts,Estado,Estado,STRING,"Estado actual de la cuenta o del hotel (activo, inactivo, etc.)."
+accounts,Finance_Pack,Finance_Pack,STRING,Paquete financiero o tipo de facturación.
+accounts,Finance_country,Finance_country,STRING,País de la entidad financiera asociada.
+accounts,HBX_Confidentiality,HBX_Confidentiality,STRING,Nivel de confidencialidad de los datos de HBX.
+accounts,Subregion,Subregion,STRING,Subregión geográfica a la que pertenece el hotel.
+accounts,chain_id,chain_id,INT64,Identificador único de la cadena hotelera.
+accounts,region,region,STRING,Región geográfica a la que pertenece el hotel.
+accounts,segmentacion,segmentacion,STRING,Segmentación o clasificación del hotel/cuenta.
+bookings,affiliate,affiliate.category,STRING,Categoría del afiliado.
+bookings,affiliate,affiliate.id,INT64,Identificador único del afiliado.
+bookings,affiliate,affiliate.name,STRING,Nombre del afiliado.
+bookings,affiliate,affiliate.subCategory,STRING,Subcategoría del afiliado.
+bookings,amounts,amounts.accommodation.amountInvoiced,FLOAT64,Métrica de accommodation: amountInvoiced.
+bookings,amounts,amounts.accommodation.amountProduced,FLOAT64,Métrica de accommodation: amountProduced.
+bookings,amounts,amounts.accommodation.invoicedWithTaxes,FLOAT64,Métrica de accommodation: invoicedWithTaxes.
+bookings,amounts,amounts.accommodation.invoicedWithoutTaxes,FLOAT64,Métrica de accommodation: invoicedWithoutTaxes.
+bookings,amounts,amounts.accommodation.producedWithTaxes,FLOAT64,Métrica de accommodation: producedWithTaxes.
+bookings,amounts,amounts.accommodation.producedWithoutTaxes,FLOAT64,Métrica de accommodation: producedWithoutTaxes.
+bookings,amounts,amounts.packages.amountInvoiced,FLOAT64,Métrica de packages: amountInvoiced.
+bookings,amounts,amounts.packages.amountProduced,FLOAT64,Métrica de packages: amountProduced.
+bookings,amounts,amounts.packages.invoicedWithTaxes,FLOAT64,Métrica de packages: invoicedWithTaxes.
+bookings,amounts,amounts.packages.invoicedWithoutTaxes,FLOAT64,Métrica de packages: invoicedWithoutTaxes.
+bookings,amounts,amounts.packages.producedWithTaxes,FLOAT64,Métrica de packages: producedWithTaxes.
+bookings,amounts,amounts.packages.producedWithoutTaxes,FLOAT64,Métrica de packages: producedWithoutTaxes.
+bookings,amounts,amounts.services.amountInvoiced,FLOAT64,Métrica de services: amountInvoiced.
+bookings,amounts,amounts.services.amountProduced,FLOAT64,Métrica de services: amountProduced.
+bookings,amounts,amounts.services.invoicedWithTaxes,FLOAT64,Métrica de services: invoicedWithTaxes.
+bookings,amounts,amounts.services.invoicedWithoutTaxes,FLOAT64,Métrica de services: invoicedWithoutTaxes.
+bookings,amounts,amounts.services.producedWithTaxes,FLOAT64,Métrica de services: producedWithTaxes.
+bookings,amounts,amounts.services.producedWithoutTaxes,FLOAT64,Métrica de services: producedWithoutTaxes.
+bookings,amounts,amounts.total.amountInvoiced,FLOAT64,Métrica de total: amountInvoiced.
+bookings,amounts,amounts.total.amountProduced,FLOAT64,Métrica de total: amountProduced.
+bookings,amounts,amounts.total.invoicedWithTaxes,FLOAT64,Métrica de total: invoicedWithTaxes.
+bookings,amounts,amounts.total.invoicedWithoutTaxes,FLOAT64,Métrica de total: invoicedWithoutTaxes.
+bookings,amounts,amounts.total.producedWithTaxes,FLOAT64,Métrica de total: producedWithTaxes.
+bookings,amounts,amounts.total.producedWithoutTaxes,FLOAT64,Métrica de total: producedWithoutTaxes.
+bookings,booking_customer_segment,booking_customer_segment,STRING,Segmento de cliente asociado a la reserva.
+bookings,booking_id,booking_id,STRING,Identificador único de la reserva.
+bookings,booking_origin,booking_origin,STRING,Origen geográfico o de la plataforma de la reserva.
+bookings,booking_source,booking_source,STRING,Fuente o canal de donde proviene la reserva.
+bookings,cancellation_reason,cancellation_reason,STRING,Motivo de la cancelación de la reserva.
+bookings,cancellation_timestamp_hotel,cancellation_timestamp_hotel,DATETIME,Fecha y hora de cancelación de la reserva (hora del hotel).
+bookings,cancellation_timestamp_utc,cancellation_timestamp_utc,TIMESTAMP,Fecha y hora de cancelación de la reserva (UTC).
+bookings,chain_code,chain_code,STRING,Código de la cadena hotelera.
+bookings,chain_id,chain_id,INT64,Identificador único de la cadena hotelera.
+bookings,chain_name,chain_name,STRING,Nombre de la cadena hotelera.
+bookings,channel,channel.code,STRING,Código del canal de venta.
+bookings,channel,channel.id,INT64,Identificador único del canal de venta.
+bookings,checkIn,checkIn,DATE,Fecha de check-in de la reserva.
+bookings,checkOut,checkOut,DATE,Fecha de check-out de la reserva.
+bookings,commission_percentage,commission_percentage,FLOAT64,Porcentaje de comisión aplicado a la reserva.
+bookings,confirmation_timestamp_hotel,confirmation_timestamp_hotel,DATETIME,Fecha y hora de confirmación de la reserva (hora del hotel).
+bookings,confirmation_timestamp_utc,confirmation_timestamp_utc,TIMESTAMP,Fecha y hora de confirmación de la reserva (UTC).
+bookings,creation_user,creation_user.id,INT64,Identificador del usuario que creó la reserva.
+bookings,creation_user,creation_user.user_code,STRING,Código del usuario que creó la reserva.
+bookings,creation_user,creation_user.user_name,STRING,Nombre del usuario que creó la reserva.
+bookings,currency_code_chain,currency_code_chain,STRING,Código de moneda utilizado por la cadena.
+bookings,currency_code_original,currency_code_original,STRING,Código de moneda original de la reserva.
+bookings,currency_rate_chain,currency_rate_chain,FLOAT64,Tasa de cambio a la moneda de la cadena.
+bookings,currency_rate_eur,currency_rate_eur,FLOAT64,Tasa de cambio a euros (EUR).
+bookings,currency_rate_usd,currency_rate_usd,FLOAT64,Tasa de cambio a dólares estadounidenses (USD).
+bookings,customer,customer.country_code,STRING,Código del país del cliente.
+bookings,customer,customer.country_name,STRING,Nombre del país del cliente.
+bookings,customer,customer.device,STRING,Tipo de dispositivo del cliente.
+bookings,customer_email,customer_email,STRING,Dirección de correo electrónico del cliente.
+bookings,customer_type,customer_type,STRING,"Tipo de cliente (ej. particular, agencia)."
+bookings,flags,flags.isBasePriceIncludesTaxes,BOOL,"Indica si ""isBasePriceIncludesTaxes"" (Booleano)."
+bookings,flags,flags.isFinalPriceIncludesTaxes,BOOL,"Indica si ""isFinalPriceIncludesTaxes"" (Booleano)."
+bookings,flags,flags.isFromCallCenter,BOOL,"Indica si ""isFromCallCenter"" (Booleano)."
+bookings,flags,flags.isGroup,BOOL,"Indica si ""isGroup"" (Booleano)."
+bookings,flags,flags.isInvoiceable,BOOL,"Indica si ""isInvoiceable"" (Booleano)."
+bookings,flags,flags.isReconfirmed,BOOL,"Indica si ""isReconfirmed"" (Booleano)."
+bookings,flags,flags.isRefundable,BOOL,"Indica si ""isRefundable"" (Booleano)."
+bookings,flags,flags.isTaxesIncluded,BOOL,"Indica si ""isTaxesIncluded"" (Booleano)."
+bookings,flags,flags.isTest,BOOL,"Indica si ""isTest"" (Booleano)."
+bookings,flags,flags.isVoucherViewed,BOOL,"Indica si ""isVoucherViewed"" (Booleano)."
+bookings,guest_country_code,guest_country_code,STRING,Código del país del huésped.
+bookings,hotel_code,hotel_code,STRING,Código del hotel.
+bookings,hotel_id,hotel_id,INT64,Identificador único del hotel.
+bookings,hotel_name,hotel_name,STRING,Nombre del hotel.
+bookings,ip_country_code,ip_country_code,STRING,Código del país de la dirección IP desde donde se realizó la reserva.
+bookings,language,language,STRING,Idioma de la reserva.
+bookings,last_action_utc,last_action_utc,TIMESTAMP,Última acción realizada en la reserva (UTC).
+bookings,lengthOfStay,lengthOfStay,INT64,Número de noches de estancia.
+bookings,loyaltyLevel,loyaltyLevel.code,STRING,Código del nivel de lealtad.
+bookings,loyaltyLevel,loyaltyLevel.id,INT64,Identificador del nivel de lealtad.
+bookings,loyaltyLevel,loyaltyLevel.informativeDiscount,STRING,Descuento informativo del nivel de lealtad.
+bookings,market,market.market_id,INT64,Identificador del mercado.
+bookings,market,market.market_name,STRING,Nombre del mercado.
+bookings,modification_timestamp_hotel,modification_timestamp_hotel,DATETIME,"Campo ""modification_timestamp_hotel"" de tipo DATETIME."
+bookings,modification_timestamp_utc,modification_timestamp_utc,TIMESTAMP,"Campo ""modification_timestamp_utc"" de tipo TIMESTAMP."
+bookings,organization,organization,STRING,Organización asociada a la reserva.
+bookings,origin,origin,STRING,Origen general de la reserva.
+bookings,packages,packages,"ARRAY<STRUCT<package_id INT64, package_type STRING, package_name STRING, package_option_name STRING, is_gift BOOL, producedWithTaxes NUMERIC, producedWithoutTaxes NUMERIC, amountProduced NUMERIC, invoicedWithTaxes NUMERIC, invoicedWithoutTaxes NUMERIC, amountInvoiced NUMERIC, dates STRUCT<fromDate DATE, toDate DATE, nights INT64>>>","Colección de paquetes contratados en la reserva, con detalles como ID, tipo, nombre, precios, fechas, etc."
+bookings,packages,packages.amountInvoiced,NUMERIC,"Campo ""amountInvoiced"" del paquete."
+bookings,packages,packages.amountProduced,NUMERIC,"Campo ""amountProduced"" del paquete."
+bookings,packages,packages.dates.fromDate,DATE,Fecha de inicio del paquete.
+bookings,packages,packages.dates.nights,INT64,Número de noches del paquete.
+bookings,packages,packages.dates.toDate,DATE,Fecha de fin del paquete.
+bookings,packages,packages.invoicedWithTaxes,NUMERIC,"Campo ""invoicedWithTaxes"" del paquete."
+bookings,packages,packages.invoicedWithoutTaxes,NUMERIC,"Campo ""invoicedWithoutTaxes"" del paquete."
+bookings,packages,packages.is_gift,BOOL,"Campo ""is_gift"" del paquete."
+bookings,packages,packages.package_id,INT64,"Campo ""package_id"" del paquete."
+bookings,packages,packages.package_name,STRING,"Campo ""package_name"" del paquete."
+bookings,packages,packages.package_option_name,STRING,"Campo ""package_option_name"" del paquete."
+bookings,packages,packages.package_type,STRING,"Campo ""package_type"" del paquete."
+bookings,packages,packages.producedWithTaxes,NUMERIC,"Campo ""producedWithTaxes"" del paquete."
+bookings,packages,packages.producedWithoutTaxes,NUMERIC,"Campo ""producedWithoutTaxes"" del paquete."
+bookings,partner,partner.gbraid,STRING,"Campo anidado: ""partner.gbraid"" de tipo STRING."
+bookings,partner,partner.gclid,STRING,"Campo anidado: ""partner.gclid"" de tipo STRING."
+bookings,payment,payment.method_code,STRING,Código del método de pago.
+bookings,payment,payment.method_id,INT64,Identificador del método de pago.
+bookings,payment,payment.profile_id,INT64,Identificador del perfil de pago.
+bookings,payment,payment.profile_type,STRING,Tipo de perfil de pago.
+bookings,profiles,profiles.agency_id,INT64,Identificador de la agencia asociada.
+bookings,profiles,profiles.business_id,INT64,Identificador del negocio asociado.
+bookings,profiles,profiles.particular_id,INT64,Identificador del cliente particular.
+bookings,promotionalCode,promotionalCode,"ARRAY<STRUCT<code STRING, appliedAmount FLOAT64, appliedPercentage FLOAT64>>",Colección de códigos promocionales aplicados a la reserva.
+bookings,promotionalCode,promotionalCode.appliedAmount,FLOAT64,Cantidad aplicada por el código promocional.
+bookings,promotionalCode,promotionalCode.appliedPercentage,FLOAT64,Porcentaje aplicado por el código promocional.
+bookings,promotionalCode,promotionalCode.code,STRING,Código promocional.
+bookings,reservation_timestamp_hotel,reservation_timestamp_hotel,DATETIME,Fecha y hora de la reserva (hora del hotel).
+bookings,reservation_timestamp_utc,reservation_timestamp_utc,TIMESTAMP,Fecha y hora de la reserva (UTC).
+bookings,roomNights,roomNights,INT64,Número total de noches de habitación reservadas.
+bookings,rooms,rooms,"ARRAY<STRUCT<bookingRoom_id STRING, checkIn DATE, checkOut DATE, room_id INT64, room_code STRING, room_name STRING, board_id INT64, board_code STRING, board_name STRING, occupancy STRING, bestAvailableRate BOOL, producedWithoutTaxes NUMERIC, producedWithTaxes NUMERIC, amountProduced NUMERIC, invoicedWithoutTaxes NUMERIC, invoicedWithTaxes NUMERIC, amountInvoiced NUMERIC, upgradePreviousPrice NUMERIC, rates ARRAY<STRUCT<code STRING, fromDate DATE, toDate DATE, price NUMERIC>>>>","Colección de habitaciones reservadas, con detalles como ID, fechas, tarifas, etc."
+bookings,rooms,rooms.amountInvoiced,NUMERIC,"Campo ""amountInvoiced"" de la habitación."
+bookings,rooms,rooms.amountProduced,NUMERIC,"Campo ""amountProduced"" de la habitación."
+bookings,rooms,rooms.bestAvailableRate,BOOL,"Campo ""bestAvailableRate"" de la habitación."
+bookings,rooms,rooms.board_code,STRING,"Campo ""board_code"" de la habitación."
+bookings,rooms,rooms.board_id,INT64,"Campo ""board_id"" de la habitación."
+bookings,rooms,rooms.board_name,STRING,"Campo ""board_name"" de la habitación."
+bookings,rooms,rooms.bookingRoom_id,STRING,"Campo ""bookingRoom_id"" de la habitación."
+bookings,rooms,rooms.checkIn,DATE,"Campo ""checkIn"" de la habitación."
+bookings,rooms,rooms.checkOut,DATE,"Campo ""checkOut"" de la habitación."
+bookings,rooms,rooms.invoicedWithTaxes,NUMERIC,"Campo ""invoicedWithTaxes"" de la habitación."
+bookings,rooms,rooms.invoicedWithoutTaxes,NUMERIC,"Campo ""invoicedWithoutTaxes"" de la habitación."
+bookings,rooms,rooms.occupancy,STRING,"Campo ""occupancy"" de la habitación."
+bookings,rooms,rooms.producedWithTaxes,NUMERIC,"Campo ""producedWithTaxes"" de la habitación."
+bookings,rooms,rooms.producedWithoutTaxes,NUMERIC,"Campo ""producedWithoutTaxes"" de la habitación."
+bookings,rooms,rooms.rates,"ARRAY<STRUCT<code STRING, fromDate DATE, toDate DATE, price NUMERIC>>","Campo ""None"" de tarifas de la habitación."
+bookings,rooms,rooms.rates.code,STRING,Código de la tarifa de la habitación.
+bookings,rooms,rooms.rates.fromDate,DATE,Fecha de inicio de la tarifa.
+bookings,rooms,rooms.rates.price,NUMERIC,Precio de la tarifa.
+bookings,rooms,rooms.rates.toDate,DATE,Fecha de fin de la tarifa.
+bookings,rooms,rooms.room_code,STRING,"Campo ""room_code"" de la habitación."
+bookings,rooms,rooms.room_id,INT64,"Campo ""room_id"" de la habitación."
+bookings,rooms,rooms.room_name,STRING,"Campo ""room_name"" de la habitación."
+bookings,rooms,rooms.upgradePreviousPrice,NUMERIC,"Campo ""upgradePreviousPrice"" de la habitación."
+bookings,services,services,"ARRAY<STRUCT<service_id INT64, service_code STRING, service_name STRING, quantity INT64, amountProduced NUMERIC, producedWithTaxes NUMERIC, producedWithoutTaxes NUMERIC, amountInvoiced NUMERIC, invoicedWithTaxes NUMERIC, invoicedWithoutTaxes NUMERIC, dates STRUCT<fromDate DATE, toDate DATE>>>","Colección de servicios adicionales contratados, con detalles como ID, código, nombre, cantidad, precios, etc."
+bookings,services,services.amountInvoiced,NUMERIC,"Campo ""amountInvoiced"" del servicio."
+bookings,services,services.amountProduced,NUMERIC,"Campo ""amountProduced"" del servicio."
+bookings,services,services.dates.fromDate,DATE,Fecha de inicio del servicio.
+bookings,services,services.dates.toDate,DATE,Fecha de fin del servicio.
+bookings,services,services.invoicedWithTaxes,NUMERIC,"Campo ""invoicedWithTaxes"" del servicio."
+bookings,services,services.invoicedWithoutTaxes,NUMERIC,"Campo ""invoicedWithoutTaxes"" del servicio."
+bookings,services,services.producedWithTaxes,NUMERIC,"Campo ""producedWithTaxes"" del servicio."
+bookings,services,services.producedWithoutTaxes,NUMERIC,"Campo ""producedWithoutTaxes"" del servicio."
+bookings,services,services.quantity,INT64,"Campo ""quantity"" del servicio."
+bookings,services,services.service_code,STRING,"Campo ""service_code"" del servicio."
+bookings,services,services.service_id,INT64,"Campo ""service_id"" del servicio."
+bookings,services,services.service_name,STRING,"Campo ""service_name"" del servicio."
+bookings,status,status,STRING,"Estado de la reserva (ej. confirmada, cancelada, pendiente)."
+bookings,trafic_source,trafic_source,STRING,Fuente de tráfico que originó la reserva.
+bookings,user_agent,user_agent,STRING,Agente de usuario del cliente (información del navegador/dispositivo).
+bookings,user_ip,user_ip,STRING,Dirección IP del usuario.
+bookings,web_domain,web_domain,STRING,Dominio web desde donde se realizó la reserva.
+properties,chain_code,chain_code,STRING,Código de la cadena hotelera.
+properties,chain_id,chain_id,INT64,Identificador único de la cadena hotelera.
+properties,chain_name_en,chain_name_en,STRING,Nombre de la cadena hotelera en inglés.
+properties,chain_name_es,chain_name_es,STRING,Nombre de la cadena hotelera en español.
+properties,hotel_code,hotel_code,STRING,Código del hotel.
+properties,hotel_country,hotel_country,STRING,País donde se encuentra el hotel.
+properties,hotel_id,hotel_id,INT64,Identificador único del hotel.
+properties,hotel_is_active,hotel_is_active,BOOL,Indica si el hotel está activo.
+properties,hotel_latitud,hotel_latitud,FLOAT64,Latitud geográfica del hotel.
+properties,hotel_longitud,hotel_longitud,FLOAT64,Longitud geográfica del hotel.
+properties,hotel_name_en,hotel_name_en,STRING,Nombre del hotel en inglés.
+properties,hotel_name_es,hotel_name_es,STRING,Nombre del hotel en español.
+properties,hotel_zone,hotel_zone,STRING,Zona o área geográfica del hotel.
+tb_data_engine_no,account,account,INT64,Identificador de la cuenta.
+tb_data_engine_no,category_device,category_device,STRING,Categoría del dispositivo utilizado por el usuario.
+tb_data_engine_no,chain_id,chain_id,INT64,Identificador único de la cadena hotelera.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.dclid,STRING,Detalle de campaña de sesión: dclid.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.gclid,STRING,Detalle de campaña de sesión: gclid.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_campaign_id,STRING,Detalle de campaña de sesión: manual_campaign_id.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_campaign_name,STRING,Detalle de campaña de sesión: manual_campaign_name.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_content,STRING,Detalle de campaña de sesión: manual_content.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_creative_format,STRING,Detalle de campaña de sesión: manual_creative_format.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_marketing_tactic,STRING,Detalle de campaña de sesión: manual_marketing_tactic.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_medium,STRING,Detalle de campaña de sesión: manual_medium.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_source,STRING,Detalle de campaña de sesión: manual_source.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_source_platform,STRING,Detalle de campaña de sesión: manual_source_platform.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.manual_term,STRING,Detalle de campaña de sesión: manual_term.None.
+tb_data_engine_no,collected_traffic_source,collected_traffic_source.srsltid,STRING,Detalle de campaña de sesión: srsltid.None.
+tb_data_engine_no,country_user,country_user,STRING,País del usuario.
+tb_data_engine_no,ecommerce,ecommerce.purchase_revenue,FLOAT64,Métrica de comercio electrónico: purchase_revenue.
+tb_data_engine_no,ecommerce,ecommerce.purchase_revenue_in_usd,FLOAT64,Métrica de comercio electrónico: purchase_revenue_in_usd.
+tb_data_engine_no,ecommerce,ecommerce.refund_value,FLOAT64,Métrica de comercio electrónico: refund_value.
+tb_data_engine_no,ecommerce,ecommerce.refund_value_in_usd,FLOAT64,Métrica de comercio electrónico: refund_value_in_usd.
+tb_data_engine_no,ecommerce,ecommerce.shipping_value,FLOAT64,Métrica de comercio electrónico: shipping_value.
+tb_data_engine_no,ecommerce,ecommerce.shipping_value_in_usd,FLOAT64,Métrica de comercio electrónico: shipping_value_in_usd.
+tb_data_engine_no,ecommerce,ecommerce.tax_value,FLOAT64,Métrica de comercio electrónico: tax_value.
+tb_data_engine_no,ecommerce,ecommerce.tax_value_in_usd,FLOAT64,Métrica de comercio electrónico: tax_value_in_usd.
+tb_data_engine_no,ecommerce,ecommerce.total_item_quantity,INT64,Métrica de comercio electrónico: total_item_quantity.
+tb_data_engine_no,ecommerce,ecommerce.transaction_id,STRING,Métrica de comercio electrónico: transaction_id.
+tb_data_engine_no,ecommerce,ecommerce.unique_items,INT64,Métrica de comercio electrónico: unique_items.
+tb_data_engine_no,event_date,event_date,DATE,Fecha del evento.
+tb_data_engine_no,event_name,event_name,STRING,Nombre del evento registrado.
+tb_data_engine_no,event_params,event_params,"ARRAY<STRUCT<key STRING, value STRUCT<string_value STRING, int_value INT64, float_value FLOAT64, double_value FLOAT64>>>","Parámetros asociados al evento, en formato de array de estructuras."
+tb_data_engine_no,event_params,event_params.key,STRING,Parámetro del evento: key.
+tb_data_engine_no,event_params,event_params.value.double_value,FLOAT64,Valor del parámetro del evento (double_value).
+tb_data_engine_no,event_params,event_params.value.float_value,FLOAT64,Valor del parámetro del evento (float_value).
+tb_data_engine_no,event_params,event_params.value.int_value,INT64,Valor del parámetro del evento (int_value).
+tb_data_engine_no,event_params,event_params.value.string_value,STRING,Valor del parámetro del evento (string_value).
+tb_data_engine_no,event_timestamp,event_timestamp,INT64,Marca de tiempo del evento.
+tb_data_engine_no,fecha_modificacion,fecha_modificacion,TIMESTAMP,Fecha de última modificación.
+tb_data_engine_no,hostname,hostname,STRING,Nombre del host donde ocurrió el evento.
+tb_data_engine_no,hotelCode_URL,hotelCode_URL,STRING,Código de hotel extraído de la URL.
+tb_data_engine_no,hotel_Code,hotel_Code,STRING,Código del hotel asociado al evento.
+tb_data_engine_no,is_active_user,is_active_user,BOOL,Indica si el usuario es un usuario activo.
+tb_data_engine_no,items,items,"ARRAY<STRUCT<item_id STRING, item_name STRING, item_brand STRING, item_variant STRING, item_category STRING, item_category2 STRING, item_category3 STRING, item_category4 STRING, item_category5 STRING, price_in_usd FLOAT64, price FLOAT64, quantity INT64, item_revenue_in_usd FLOAT64, item_revenue FLOAT64, item_refund_in_usd FLOAT64, item_refund FLOAT64, coupon STRING, affiliation STRING, location_id STRING, item_list_id STRING, item_list_name STRING, item_list_index STRING, promotion_id STRING, promotion_name STRING, creative_name STRING, creative_slot STRING, item_params ARRAY<STRUCT<key STRING, value STRUCT<string_value STRING, int_value INT64, float_value FLOAT64, double_value FLOAT64>>>>>",Colección de ítems o productos asociados al evento.
+tb_data_engine_no,items,items.affiliation,STRING,Propiedad del ítem: affiliation.
+tb_data_engine_no,items,items.coupon,STRING,Propiedad del ítem: coupon.
+tb_data_engine_no,items,items.creative_name,STRING,Propiedad del ítem: creative_name.
+tb_data_engine_no,items,items.creative_slot,STRING,Propiedad del ítem: creative_slot.
+tb_data_engine_no,items,items.item_brand,STRING,Propiedad del ítem: item_brand.
+tb_data_engine_no,items,items.item_category,STRING,Propiedad del ítem: item_category.
+tb_data_engine_no,items,items.item_category2,STRING,Propiedad del ítem: item_category2.
+tb_data_engine_no,items,items.item_category3,STRING,Propiedad del ítem: item_category3.
+tb_data_engine_no,items,items.item_category4,STRING,Propiedad del ítem: item_category4.
+tb_data_engine_no,items,items.item_category5,STRING,Propiedad del ítem: item_category5.
+tb_data_engine_no,items,items.item_id,STRING,Propiedad del ítem: item_id.
+tb_data_engine_no,items,items.item_list_id,STRING,Propiedad del ítem: item_list_id.
+tb_data_engine_no,items,items.item_list_index,STRING,Propiedad del ítem: item_list_index.
+tb_data_engine_no,items,items.item_list_name,STRING,Propiedad del ítem: item_list_name.
+tb_data_engine_no,items,items.item_name,STRING,Propiedad del ítem: item_name.
+tb_data_engine_no,items,items.item_params,"ARRAY<STRUCT<key STRING, value STRUCT<string_value STRING, int_value INT64, float_value FLOAT64, double_value FLOAT64>>>",Parámetro del ítem: None.
+tb_data_engine_no,items,items.item_params.key,STRING,Parámetro del ítem: key.
+tb_data_engine_no,items,items.item_params.value.double_value,FLOAT64,Parámetro del ítem: value.
+tb_data_engine_no,items,items.item_params.value.float_value,FLOAT64,Parámetro del ítem: value.
+tb_data_engine_no,items,items.item_params.value.int_value,INT64,Parámetro del ítem: value.
+tb_data_engine_no,items,items.item_params.value.string_value,STRING,Parámetro del ítem: value.
+tb_data_engine_no,items,items.item_refund,FLOAT64,Propiedad del ítem: item_refund.
+tb_data_engine_no,items,items.item_refund_in_usd,FLOAT64,Propiedad del ítem: item_refund_in_usd.
+tb_data_engine_no,items,items.item_revenue,FLOAT64,Propiedad del ítem: item_revenue.
+tb_data_engine_no,items,items.item_revenue_in_usd,FLOAT64,Propiedad del ítem: item_revenue_in_usd.
+tb_data_engine_no,items,items.item_variant,STRING,Propiedad del ítem: item_variant.
+tb_data_engine_no,items,items.location_id,STRING,Propiedad del ítem: location_id.
+tb_data_engine_no,items,items.price,FLOAT64,Propiedad del ítem: price.
+tb_data_engine_no,items,items.price_in_usd,FLOAT64,Propiedad del ítem: price_in_usd.
+tb_data_engine_no,items,items.promotion_id,STRING,Propiedad del ítem: promotion_id.
+tb_data_engine_no,items,items.promotion_name,STRING,Propiedad del ítem: promotion_name.
+tb_data_engine_no,items,items.quantity,INT64,Propiedad del ítem: quantity.
+tb_data_engine_no,page_location,page_location,STRING,URL de la página donde ocurrió el evento.
+tb_data_engine_no,page_referrer,page_referrer,STRING,URL de la página de referencia.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.account_id,STRING,Campaña CM360 - account_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.account_name,STRING,Campaña CM360 - account_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.advertiser_id,STRING,Campaña CM360 - advertiser_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.advertiser_name,STRING,Campaña CM360 - advertiser_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.campaign_id,STRING,Campaña CM360 - campaign_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.campaign_name,STRING,Campaña CM360 - campaign_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_format,STRING,Campaña CM360 - creative_format.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_id,STRING,Campaña CM360 - creative_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_name,STRING,Campaña CM360 - creative_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_type,STRING,Campaña CM360 - creative_type.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_type_id,STRING,Campaña CM360 - creative_type_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_version,STRING,Campaña CM360 - creative_version.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.medium,STRING,Campaña CM360 - medium.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.placement_cost_structure,STRING,Campaña CM360 - placement_cost_structure.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.placement_id,STRING,Campaña CM360 - placement_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.placement_name,STRING,Campaña CM360 - placement_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.rendering_id,STRING,Campaña CM360 - rendering_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.site_id,STRING,Campaña CM360 - site_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.site_name,STRING,Campaña CM360 - site_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.source,STRING,Campaña CM360 - source.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.campaign_id,STRING,Campaña Cross-Channel - campaign_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.campaign_name,STRING,Campaña Cross-Channel - campaign_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.default_channel_group,STRING,Campaña Cross-Channel - default_channel_group.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.medium,STRING,Campaña Cross-Channel - medium.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.primary_channel_group,STRING,Campaña Cross-Channel - primary_channel_group.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.source,STRING,Campaña Cross-Channel - source.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.source_platform,STRING,Campaña Cross-Channel - source_platform.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.advertiser_id,STRING,Campaña DV360 - advertiser_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.advertiser_name,STRING,Campaña DV360 - advertiser_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.campaign_id,STRING,Campaña DV360 - campaign_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.campaign_name,STRING,Campaña DV360 - campaign_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.creative_format,STRING,Campaña DV360 - creative_format.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.creative_id,STRING,Campaña DV360 - creative_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.creative_name,STRING,Campaña DV360 - creative_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.exchange_id,STRING,Campaña DV360 - exchange_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.exchange_name,STRING,Campaña DV360 - exchange_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.insertion_order_id,STRING,Campaña DV360 - insertion_order_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.insertion_order_name,STRING,Campaña DV360 - insertion_order_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.line_item_id,STRING,Campaña DV360 - line_item_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.line_item_name,STRING,Campaña DV360 - line_item_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.medium,STRING,Campaña DV360 - medium.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.partner_id,STRING,Campaña DV360 - partner_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.partner_name,STRING,Campaña DV360 - partner_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.source,STRING,Campaña DV360 - source.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.account_name,STRING,Campaña Google Ads - account_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.ad_group_id,STRING,Campaña Google Ads - ad_group_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.ad_group_name,STRING,Campaña Google Ads - ad_group_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.campaign_id,STRING,Campaña Google Ads - campaign_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.campaign_name,STRING,Campaña Google Ads - campaign_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.customer_id,STRING,Campaña Google Ads - customer_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.campaign_id,STRING,Campaña Manual - campaign_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.campaign_name,STRING,Campaña Manual - campaign_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.content,STRING,Campaña Manual - content.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.creative_format,STRING,Campaña Manual - creative_format.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.marketing_tactic,STRING,Campaña Manual - marketing_tactic.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.medium,STRING,Campaña Manual - medium.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.source,STRING,Campaña Manual - source.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.source_platform,STRING,Campaña Manual - source_platform.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.term,STRING,Campaña Manual - term.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.ad_group_id,STRING,Campaña SA360 - ad_group_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.ad_group_name,STRING,Campaña SA360 - ad_group_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.campaign_id,STRING,Campaña SA360 - campaign_id.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.campaign_name,STRING,Campaña SA360 - campaign_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.creative_format,STRING,Campaña SA360 - creative_format.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.engine_account_name,STRING,Campaña SA360 - engine_account_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.engine_account_type,STRING,Campaña SA360 - engine_account_type.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.manager_account_name,STRING,Campaña SA360 - manager_account_name.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.medium,STRING,Campaña SA360 - medium.
+tb_data_engine_no,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.source,STRING,Campaña SA360 - source.
+tb_data_engine_no,traffic_source,traffic_source.medium,STRING,Detalle de la fuente de tráfico: medium.
+tb_data_engine_no,traffic_source,traffic_source.name,STRING,Detalle de la fuente de tráfico: name.
+tb_data_engine_no,traffic_source,traffic_source.source,STRING,Detalle de la fuente de tráfico: source.
+tb_data_engine_no,user_first_touch_timestamp,user_first_touch_timestamp,INT64,Marca de tiempo del primer contacto del usuario.
+tb_data_engine_no,user_pseudo_id,user_pseudo_id,STRING,ID pseudoanónimo del usuario.
+tb_data_engine_yes,account,account,INT64,Identificador de la cuenta.
+tb_data_engine_yes,availability,availability,STRING,Disponibilidad del producto o servicio.
+tb_data_engine_yes,category_device,category_device,STRING,Categoría del dispositivo utilizado por el usuario.
+tb_data_engine_yes,chain_id,chain_id,INT64,Identificador único de la cadena hotelera.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.dclid,STRING,Detalle de campaña de sesión: dclid.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.gclid,STRING,Detalle de campaña de sesión: gclid.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_campaign_id,STRING,Detalle de campaña de sesión: manual_campaign_id.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_campaign_name,STRING,Detalle de campaña de sesión: manual_campaign_name.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_content,STRING,Detalle de campaña de sesión: manual_content.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_creative_format,STRING,Detalle de campaña de sesión: manual_creative_format.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_marketing_tactic,STRING,Detalle de campaña de sesión: manual_marketing_tactic.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_medium,STRING,Detalle de campaña de sesión: manual_medium.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_source,STRING,Detalle de campaña de sesión: manual_source.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_source_platform,STRING,Detalle de campaña de sesión: manual_source_platform.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.manual_term,STRING,Detalle de campaña de sesión: manual_term.None.
+tb_data_engine_yes,collected_traffic_source,collected_traffic_source.srsltid,STRING,Detalle de campaña de sesión: srsltid.None.
+tb_data_engine_yes,country_user,country_user,STRING,País del usuario.
+tb_data_engine_yes,event_date,event_date,DATE,Fecha del evento.
+tb_data_engine_yes,event_name,event_name,STRING,Nombre del evento registrado.
+tb_data_engine_yes,event_params,event_params,"ARRAY<STRUCT<key STRING, value STRUCT<string_value STRING, int_value INT64, float_value FLOAT64, double_value FLOAT64>>>","Parámetros asociados al evento, en formato de array de estructuras."
+tb_data_engine_yes,event_params,event_params.key,STRING,Parámetro del evento: key.
+tb_data_engine_yes,event_params,event_params.value.double_value,FLOAT64,Valor del parámetro del evento (double_value).
+tb_data_engine_yes,event_params,event_params.value.float_value,FLOAT64,Valor del parámetro del evento (float_value).
+tb_data_engine_yes,event_params,event_params.value.int_value,INT64,Valor del parámetro del evento (int_value).
+tb_data_engine_yes,event_params,event_params.value.string_value,STRING,Valor del parámetro del evento (string_value).
+tb_data_engine_yes,event_timestamp,event_timestamp,INT64,Marca de tiempo del evento.
+tb_data_engine_yes,extras,extras,"ARRAY<STRUCT<extra_name STRING, cod_extra STRING, price FLOAT64, currency STRING, hotel_code STRING, checkin DATE, checkout DATE, los INT64, cod_habitacion STRING, pos_list INT64, quantity INT64>>",Detalles de extras o servicios adicionales.
+tb_data_engine_yes,extras,extras.checkin,DATE,Propiedad del extra: checkin.
+tb_data_engine_yes,extras,extras.checkout,DATE,Propiedad del extra: checkout.
+tb_data_engine_yes,extras,extras.cod_extra,STRING,Propiedad del extra: cod_extra.
+tb_data_engine_yes,extras,extras.cod_habitacion,STRING,Propiedad del extra: cod_habitacion.
+tb_data_engine_yes,extras,extras.currency,STRING,Propiedad del extra: currency.
+tb_data_engine_yes,extras,extras.extra_name,STRING,Propiedad del extra: extra_name.
+tb_data_engine_yes,extras,extras.hotel_code,STRING,Propiedad del extra: hotel_code.
+tb_data_engine_yes,extras,extras.los,INT64,Propiedad del extra: los.
+tb_data_engine_yes,extras,extras.pos_list,INT64,Propiedad del extra: pos_list.
+tb_data_engine_yes,extras,extras.price,FLOAT64,Propiedad del extra: price.
+tb_data_engine_yes,extras,extras.quantity,INT64,Propiedad del extra: quantity.
+tb_data_engine_yes,fecha_modificacion,fecha_modificacion,TIMESTAMP,Fecha de última modificación.
+tb_data_engine_yes,hostname,hostname,STRING,Nombre del host donde ocurrió el evento.
+tb_data_engine_yes,hotel_code,hotel_code,STRING,Código del hotel.
+tb_data_engine_yes,hotelcode_url,hotelcode_url,STRING,"Campo ""hotelcode_url"" de tipo STRING."
+tb_data_engine_yes,hotels,hotels,"ARRAY<STRUCT<hotel_name STRING, hotel_code STRING, min_price FLOAT64, currency STRING, checkin DATE, checkout DATE, los INT64, rating STRING, pos_list INT64, quantity INT64>>",Información sobre hoteles.
+tb_data_engine_yes,hotels,hotels.checkin,DATE,Propiedad del hotel: checkin.
+tb_data_engine_yes,hotels,hotels.checkout,DATE,Propiedad del hotel: checkout.
+tb_data_engine_yes,hotels,hotels.currency,STRING,Propiedad del hotel: currency.
+tb_data_engine_yes,hotels,hotels.hotel_code,STRING,Propiedad del hotel: hotel_code.
+tb_data_engine_yes,hotels,hotels.hotel_name,STRING,Propiedad del hotel: hotel_name.
+tb_data_engine_yes,hotels,hotels.los,INT64,Propiedad del hotel: los.
+tb_data_engine_yes,hotels,hotels.min_price,FLOAT64,Propiedad del hotel: min_price.
+tb_data_engine_yes,hotels,hotels.pos_list,INT64,Propiedad del hotel: pos_list.
+tb_data_engine_yes,hotels,hotels.quantity,INT64,Propiedad del hotel: quantity.
+tb_data_engine_yes,hotels,hotels.rating,STRING,Propiedad del hotel: rating.
+tb_data_engine_yes,is_active_user,is_active_user,BOOL,Indica si el usuario es un usuario activo.
+tb_data_engine_yes,item_category,item_category,STRING,Categoría del ítem.
+tb_data_engine_yes,package,package,"ARRAY<STRUCT<package_name STRING, cod_package STRING, price FLOAT64, currency STRING, hotel_code STRING, checkin DATE, checkout DATE, los INT64, cod_cat_package STRING, pos_list INT64, quantity INT64>>",Detalles del paquete.
+tb_data_engine_yes,package,package.checkin,DATE,Propiedad del paquete: checkin.
+tb_data_engine_yes,package,package.checkout,DATE,Propiedad del paquete: checkout.
+tb_data_engine_yes,package,package.cod_cat_package,STRING,Propiedad del paquete: cod_cat_package.
+tb_data_engine_yes,package,package.cod_package,STRING,Propiedad del paquete: cod_package.
+tb_data_engine_yes,package,package.currency,STRING,Propiedad del paquete: currency.
+tb_data_engine_yes,package,package.hotel_code,STRING,Propiedad del paquete: hotel_code.
+tb_data_engine_yes,package,package.los,INT64,Propiedad del paquete: los.
+tb_data_engine_yes,package,package.package_name,STRING,Propiedad del paquete: package_name.
+tb_data_engine_yes,package,package.pos_list,INT64,Propiedad del paquete: pos_list.
+tb_data_engine_yes,package,package.price,FLOAT64,Propiedad del paquete: price.
+tb_data_engine_yes,package,package.quantity,INT64,Propiedad del paquete: quantity.
+tb_data_engine_yes,package_gift,package_gift,"ARRAY<STRUCT<package_name STRING, cod_package STRING, price FLOAT64, currency STRING, hotel_code STRING, cod_cat_package STRING, pos_list INT64, quantity INT64>>",Detalles del paquete de regalo.
+tb_data_engine_yes,package_gift,package_gift.cod_cat_package,STRING,Propiedad del paquete de regalo: cod_cat_package.
+tb_data_engine_yes,package_gift,package_gift.cod_package,STRING,Propiedad del paquete de regalo: cod_package.
+tb_data_engine_yes,package_gift,package_gift.currency,STRING,Propiedad del paquete de regalo: currency.
+tb_data_engine_yes,package_gift,package_gift.hotel_code,STRING,Propiedad del paquete de regalo: hotel_code.
+tb_data_engine_yes,package_gift,package_gift.package_name,STRING,Propiedad del paquete de regalo: package_name.
+tb_data_engine_yes,package_gift,package_gift.pos_list,INT64,Propiedad del paquete de regalo: pos_list.
+tb_data_engine_yes,package_gift,package_gift.price,FLOAT64,Propiedad del paquete de regalo: price.
+tb_data_engine_yes,package_gift,package_gift.quantity,INT64,Propiedad del paquete de regalo: quantity.
+tb_data_engine_yes,page_location,page_location,STRING,URL de la página donde ocurrió el evento.
+tb_data_engine_yes,page_referrer,page_referrer,STRING,URL de la página de referencia.
+tb_data_engine_yes,rooms,rooms,"ARRAY<STRUCT<item_name STRING, item_id STRING, price FLOAT64, currency STRING, hotel_code STRING, occupancy STRING, checkin DATE, checkout DATE, los INT64, cod_pension STRING, cod_tarifa STRING, pos_list INT64, quantity INT64>>","Colección de habitaciones reservadas, con detalles como ID, fechas, tarifas, etc."
+tb_data_engine_yes,rooms,rooms.checkin,DATE,"Campo ""checkin"" de la habitación."
+tb_data_engine_yes,rooms,rooms.checkout,DATE,"Campo ""checkout"" de la habitación."
+tb_data_engine_yes,rooms,rooms.cod_pension,STRING,"Campo ""cod_pension"" de la habitación."
+tb_data_engine_yes,rooms,rooms.cod_tarifa,STRING,"Campo ""cod_tarifa"" de la habitación."
+tb_data_engine_yes,rooms,rooms.currency,STRING,"Campo ""currency"" de la habitación."
+tb_data_engine_yes,rooms,rooms.hotel_code,STRING,"Campo ""hotel_code"" de la habitación."
+tb_data_engine_yes,rooms,rooms.item_id,STRING,"Campo ""item_id"" de la habitación."
+tb_data_engine_yes,rooms,rooms.item_name,STRING,"Campo ""item_name"" de la habitación."
+tb_data_engine_yes,rooms,rooms.los,INT64,"Campo ""los"" de la habitación."
+tb_data_engine_yes,rooms,rooms.occupancy,STRING,"Campo ""occupancy"" de la habitación."
+tb_data_engine_yes,rooms,rooms.pos_list,INT64,"Campo ""pos_list"" de la habitación."
+tb_data_engine_yes,rooms,rooms.price,FLOAT64,"Campo ""price"" de la habitación."
+tb_data_engine_yes,rooms,rooms.quantity,INT64,"Campo ""quantity"" de la habitación."
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.account_id,STRING,Campaña CM360 - account_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.account_name,STRING,Campaña CM360 - account_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.advertiser_id,STRING,Campaña CM360 - advertiser_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.advertiser_name,STRING,Campaña CM360 - advertiser_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.campaign_id,STRING,Campaña CM360 - campaign_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.campaign_name,STRING,Campaña CM360 - campaign_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_format,STRING,Campaña CM360 - creative_format.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_id,STRING,Campaña CM360 - creative_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_name,STRING,Campaña CM360 - creative_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_type,STRING,Campaña CM360 - creative_type.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_type_id,STRING,Campaña CM360 - creative_type_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.creative_version,STRING,Campaña CM360 - creative_version.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.medium,STRING,Campaña CM360 - medium.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.placement_cost_structure,STRING,Campaña CM360 - placement_cost_structure.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.placement_id,STRING,Campaña CM360 - placement_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.placement_name,STRING,Campaña CM360 - placement_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.rendering_id,STRING,Campaña CM360 - rendering_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.site_id,STRING,Campaña CM360 - site_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.site_name,STRING,Campaña CM360 - site_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cm360_campaign.source,STRING,Campaña CM360 - source.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.campaign_id,STRING,Campaña Cross-Channel - campaign_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.campaign_name,STRING,Campaña Cross-Channel - campaign_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.default_channel_group,STRING,Campaña Cross-Channel - default_channel_group.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.medium,STRING,Campaña Cross-Channel - medium.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.primary_channel_group,STRING,Campaña Cross-Channel - primary_channel_group.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.source,STRING,Campaña Cross-Channel - source.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.cross_channel_campaign.source_platform,STRING,Campaña Cross-Channel - source_platform.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.advertiser_id,STRING,Campaña DV360 - advertiser_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.advertiser_name,STRING,Campaña DV360 - advertiser_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.campaign_id,STRING,Campaña DV360 - campaign_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.campaign_name,STRING,Campaña DV360 - campaign_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.creative_format,STRING,Campaña DV360 - creative_format.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.creative_id,STRING,Campaña DV360 - creative_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.creative_name,STRING,Campaña DV360 - creative_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.exchange_id,STRING,Campaña DV360 - exchange_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.exchange_name,STRING,Campaña DV360 - exchange_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.insertion_order_id,STRING,Campaña DV360 - insertion_order_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.insertion_order_name,STRING,Campaña DV360 - insertion_order_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.line_item_id,STRING,Campaña DV360 - line_item_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.line_item_name,STRING,Campaña DV360 - line_item_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.medium,STRING,Campaña DV360 - medium.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.partner_id,STRING,Campaña DV360 - partner_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.partner_name,STRING,Campaña DV360 - partner_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.dv360_campaign.source,STRING,Campaña DV360 - source.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.account_name,STRING,Campaña Google Ads - account_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.ad_group_id,STRING,Campaña Google Ads - ad_group_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.ad_group_name,STRING,Campaña Google Ads - ad_group_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.campaign_id,STRING,Campaña Google Ads - campaign_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.campaign_name,STRING,Campaña Google Ads - campaign_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.google_ads_campaign.customer_id,STRING,Campaña Google Ads - customer_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.campaign_id,STRING,Campaña Manual - campaign_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.campaign_name,STRING,Campaña Manual - campaign_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.content,STRING,Campaña Manual - content.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.creative_format,STRING,Campaña Manual - creative_format.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.marketing_tactic,STRING,Campaña Manual - marketing_tactic.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.medium,STRING,Campaña Manual - medium.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.source,STRING,Campaña Manual - source.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.source_platform,STRING,Campaña Manual - source_platform.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.manual_campaign.term,STRING,Campaña Manual - term.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.ad_group_id,STRING,Campaña SA360 - ad_group_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.ad_group_name,STRING,Campaña SA360 - ad_group_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.campaign_id,STRING,Campaña SA360 - campaign_id.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.campaign_name,STRING,Campaña SA360 - campaign_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.creative_format,STRING,Campaña SA360 - creative_format.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.engine_account_name,STRING,Campaña SA360 - engine_account_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.engine_account_type,STRING,Campaña SA360 - engine_account_type.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.manager_account_name,STRING,Campaña SA360 - manager_account_name.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.medium,STRING,Campaña SA360 - medium.
+tb_data_engine_yes,session_traffic_source_last_click,session_traffic_source_last_click.sa360_campaign.source,STRING,Campaña SA360 - source.
+tb_data_engine_yes,traffic_source,traffic_source.medium,STRING,Detalle de la fuente de tráfico: medium.
+tb_data_engine_yes,traffic_source,traffic_source.name,STRING,Detalle de la fuente de tráfico: name.
+tb_data_engine_yes,traffic_source,traffic_source.source,STRING,Detalle de la fuente de tráfico: source.
+tb_data_engine_yes,user_first_touch_timestamp,user_first_touch_timestamp,INT64,Marca de tiempo del primer contacto del usuario.
+tb_data_engine_yes,user_pseudo_id,user_pseudo_id,STRING,ID pseudoanónimo del usuario.
+tb_map_country_iso,ISO_2_Code,ISO_2_Code,STRING,Código ISO de 2 letras del país.
+tb_map_country_iso,ISO_3_code,ISO_3_code,STRING,Código ISO de 3 letras del país.
+tb_map_country_iso,ISO_numeric,ISO_numeric,INT64,Código numérico ISO del país.
+tb_map_country_iso,country_BI,country_BI,STRING,País según la inteligencia de negocio.
+tb_map_country_iso,country_GA4,country_GA4,STRING,País según Google Analytics 4.

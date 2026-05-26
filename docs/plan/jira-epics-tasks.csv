@@ -1,0 +1,269 @@
+Issue Type,External ID,Summary,Description,Epic Name,Epic Link,Priority,Story Points,Labels,Components,Assignee
+Epic,HBE0002-E01,Fundaciones de gobernanza y datos,"Area Governance / Data Eng. Milestone M1-M2. Use cases: all. Entrega las bases de gobernanza y datos (glosario Dataplex, catalogo, Data Quality y linaje) que sustentan toda la plataforma analitica.",Fundaciones de gobernanza y datos,,Alta,,governance data-eng,"Governance,Data-Eng",
+Epic,HBE0002-E02,Infraestructura y IaC (Terraform + Atlantis),"Area DevOps / Infra. Milestone M1. Use cases: all. Provisiona la infraestructura GCP y el flujo IaC con Terraform y Atlantis para habilitar entornos prod/dev gobernados.",Infraestructura y IaC (Terraform + Atlantis),,Alta,,devops infra,"DevOps,Infra",
+Epic,HBE0002-E03,Capa de transformacion (Dataform + Cloud Workflows),"Area Data Eng. Milestone M2. Use cases: UC-01/02/03/04. Construye la capa medallon Silver/Gold/Platinum en Dataform orquestada con Cloud Workflows y Scheduler.",Capa de transformacion (Dataform + Cloud Workflows),,Alta,,data-eng,Data-Eng,
+Epic,HBE0002-E04,Machine Learning y modelos (BigQuery ML),"Area ML/AI / Data Science. Milestone M2-M3. Use cases: UC-01/03/04. Entrena y publica modelos BQML (anomalias, forecasting, clustering) con pipeline de reentrenamiento.",Machine Learning y modelos (BigQuery ML),,Alta,,ml-ai data-science,"ML-AI,Data-Science",
+Epic,HBE0002-E05,Sistema de alertas (Slack + Cloud Workflows),"Area Data Eng / Observability. Milestone M3. Use cases: UC-01. Implementa las alertas de anomalias y forecasting en Slack via Cloud Workflows y Cloud Functions.",Sistema de alertas (Slack + Cloud Workflows),,Alta,,data-eng observability,"Data-Eng,Observability",
+Epic,HBE0002-E06,"Observabilidad, monitorizacion y FinOps","Area DevOps / FinOps. Milestone M3-M4. Use cases: all. Centraliza logging, dashboards, alertas operativas y control de costes para gobernar la plataforma.","Observabilidad, monitorizacion y FinOps",,Media,,devops finops observability,"DevOps,FinOps,Observability",
+Epic,HBE0002-E07,"Seguridad, IAM y cumplimiento","Area Security / Governance. Milestone M1. Use cases: all. Define la matriz IAM TO-BE, service accounts, secretos, red y cumplimiento GDPR de la plataforma.","Seguridad, IAM y cumplimiento",,Alta,,security governance,"Security,Governance",
+Epic,HBE0002-E08,Dashboard integral de reunion (UC-02),"Area BI / Data Eng. Milestone M3. Use cases: UC-02. Entrega el dashboard Looker Studio UC-02 con esquema Gold, agregados BI e integracion del resumen de IA.",Dashboard integral de reunion (UC-02),,Alta,,bi data-eng,"BI,Data-Eng",
+Epic,HBE0002-E09,Asistente conversacional (UC-05),"Area ML/AI / Data Eng. Milestone M3. Use cases: UC-05. Construye el agente conversacional (Cloud Run + Slack Bot) con RAG sobre BigQuery y validacion ground truth.",Asistente conversacional (UC-05),,Media,,ml-ai data-eng,"ML-AI,Data-Eng",
+Epic,HBE0002-E10,"Validacion, testing y UAT","Area QA / Testing. Milestone M4. Use cases: all. Ejecuta el plan de pruebas unitarias, integracion, calidad, rendimiento, seguridad y UAT con DCS.","Validacion, testing y UAT",,Alta,,qa testing,"QA,Testing",
+Epic,HBE0002-E11,Documentacion y handover,"Area PM / Documentation. Milestone M4. Use cases: all. Cierra el proyecto con documentacion de arquitectura, runbooks, glosario final, onboarding y notebooks de ejemplo.",Documentacion y handover,,Media,,documentation pm,"Documentation,PM",
+Epic,HBE0002-E12,Spikes y decisiones pendientes,"Area PM / Architecture. Milestone M1. Use cases: all (unblocks). Resuelve los spikes de volumetria, region, IAM, costes, KPIs y on-premise que desbloquean el resto de epics.",Spikes y decisiones pendientes,,Alta,,pm architecture,"PM,Architecture",
+Story,HBE0002-E01-01,Definir e implementar glosario de negocio en Dataplex,"Crear glosario en Dataplex con >=50 terminos validados por Roiback (TTV, RN, ABV, % cancelacion, lead time, paridad...) como base de la capa semantica unica.
+Dependencias: HBE0002-E12-05
+Items abiertos: S-14, D-12
+Spike: No",,Fundaciones de gobernanza y datos,Alta,5,governance glossary,"Governance,Data-Eng",Belen
+Story,HBE0002-E01-02,Implementar catalogo de datos y aspectos en Dataplex,"Indexar activos de BigQuery; plantillas de etiquetas (Data Classification, Owner, Area, Process); enriquecimiento desde Dataform.
+Dependencias: HBE0002-E01-01
+Items abiertos: S-05, S-07
+Spike: No",,Fundaciones de gobernanza y datos,Alta,5,governance catalog,"Governance,Data-Eng",Belen
+Story,HBE0002-E01-03,Configurar Data Quality (assertions Dataform + Dataplex DQ jobs),"15+ reglas: nulos, duplicados, integridad referencial; pipeline detenido ante DQ critical; alertas a #data-ops-logs.
+Dependencias: HBE0002-E03-01
+Items abiertos: S-11
+Spike: No",,Fundaciones de gobernanza y datos,Alta,5,governance data-quality,"Governance,Data-Eng",Belen
+Story,HBE0002-E01-04,Matriz de linaje de datos (Dataform -> Dataplex),"Linaje automatico visible en Dataform y Dataplex para 100 % de tablas Silver/Gold/Platinum.
+Dependencias: HBE0002-E03-02, HBE0002-E03-03, HBE0002-E03-04
+Items abiertos: —
+Spike: No",,Fundaciones de gobernanza y datos,Media,3,governance lineage,Governance,Belen
+Story,HBE0002-E02-01,Provisionar jerarquia de proyectos GCP,"Crear roiback-dwh-ai-prod, roiback-dwh-ai-dev, roiback-dwh-governance bajo roiback.com; carpetas Production/Non-Production.
+Dependencias: HBE0002-E12-02
+Items abiertos: S-10
+Spike: No",,Infraestructura y IaC (Terraform + Atlantis),Alta,5,infra gcp bootstrap,"DevOps,Infra",Juan
+Story,HBE0002-E02-02,Backend remoto de Terraform en GCS (state + lock),"Bucket versionado + bloqueo de estado; convenciones de naming validadas.
+Dependencias: HBE0002-E02-01
+Items abiertos: —
+Spike: No",,Infraestructura y IaC (Terraform + Atlantis),Alta,2,infra iac,DevOps,Juan
+Story,HBE0002-E02-03,Atlantis + GitLab CI/CD para Terraform,"PRs auto-plan + apply; flujo monorepo main + features.
+Dependencias: HBE0002-E02-02
+Items abiertos: S-15
+Spike: No",,Infraestructura y IaC (Terraform + Atlantis),Alta,5,infra cicd atlantis,DevOps,Juan
+Story,HBE0002-E02-04,Modulos Terraform reutilizables,"Modulos: bq_dataset, iam_roles, cloud_workflows, secret_manager, monitoring.
+Dependencias: HBE0002-E02-03
+Items abiertos: S-14
+Spike: No",,Infraestructura y IaC (Terraform + Atlantis),Alta,5,infra iac modules,DevOps,Juan
+Story,HBE0002-E02-05,Etiquetado de facturacion y limites de query,"Etiquetas environment, cost_center, owner; limite de bytes por query (SA Dataform exenta).
+Dependencias: HBE0002-E02-01
+Items abiertos: S-07, S-18
+Spike: No",,Infraestructura y IaC (Terraform + Atlantis),Media,3,finops tagging quotas,"DevOps,FinOps",Juan
+Story,HBE0002-E03-01,Inicializar proyecto Dataform y estructura medallon,"Carpetas sources/, intermediate/, output/{silver,gold,platinum} operativas con un modelo de ejemplo en cada capa.
+Dependencias: HBE0002-E02-01, HBE0002-E01-01
+Items abiertos: —
+Spike: No",,Capa de transformacion (Dataform + Cloud Workflows),Alta,5,dataform medallion,Data-Eng,Belen
+Story,HBE0002-E03-02,Transformaciones Silver,"Modelos silver/{crs,core,google_analytics,sources}: deduplicacion, conversion de moneda (currency_rate_*), mapeo country con tb_map_country_iso, filtros de reservas de prueba.
+Dependencias: HBE0002-E03-01
+Items abiertos: S-04, S-02
+Spike: No",,Capa de transformacion (Dataform + Cloud Workflows),Alta,8,dataform silver,Data-Eng,Belen
+Story,HBE0002-E03-03,Transformaciones Gold + KPIs (esquema estrella),"Fact/dim tables; KPIs TTV (amounts.total.producedWithTaxes), RN, ABV, ADR, LoS, % cancelacion; particionado por modification_timestamp_utc, clusterizado por chain/hotel_id.
+Dependencias: HBE0002-E03-02, HBE0002-E12-05
+Items abiertos: S-05, S-06
+Spike: No",,Capa de transformacion (Dataform + Cloud Workflows),Alta,8,dataform gold kpi,Data-Eng,Belen
+Story,HBE0002-E03-04,Capa Platinum (ML-ready + UC outputs),"Tablas gold.kpi_anomalies, gold.kpi_forecast, gold.hotel_clusters, salidas para asistente conversacional.
+Dependencias: HBE0002-E03-03, HBE0002-E04-05
+Items abiertos: —
+Spike: No",,Capa de transformacion (Dataform + Cloud Workflows),Alta,5,dataform platinum,Data-Eng,Belen
+Story,HBE0002-E03-05,Orquestacion con Cloud Workflows,"Workflows YAML versionados en GitLab (hourly_bookings_silver, daily_sales_gold, daily_ml_platinum); 3 reintentos con backoff.
+Dependencias: HBE0002-E03-01
+Items abiertos: —
+Spike: No",,Capa de transformacion (Dataform + Cloud Workflows),Alta,5,cloud-workflows orchestration,"Data-Eng,DevOps",Belen
+Story,HBE0002-E03-06,Triggers con Cloud Scheduler,"Bookings cada hora; GA4 2x/dia; Salesforce diario; resto a las 08:30 Madrid.
+Dependencias: HBE0002-E03-05
+Items abiertos: —
+Spike: No",,Capa de transformacion (Dataform + Cloud Workflows),Media,2,scheduling,DevOps,Juan
+Story,HBE0002-E03-07,Testing Dataform (unit + DQ assertions),"Cobertura >=80 % de transformaciones criticas; integracion referencial; nulls/duplicados.
+Dependencias: HBE0002-E03-02, HBE0002-E03-03
+Items abiertos: —
+Spike: No",,Capa de transformacion (Dataform + Cloud Workflows),Alta,5,qa assertions,"Data-Eng,QA",Belen
+Story,HBE0002-E04-01,Modelo de deteccion de anomalias (ARIMA_PLUS),"Por hotel/cadena; objetivo F1 > 0.75 en validacion; activa UC-01.
+Dependencias: HBE0002-E03-03
+Items abiertos: —
+Spike: No",,Machine Learning y modelos (BigQuery ML),Alta,8,bqml anomaly-detection arima,ML-AI,Chema
+Story,HBE0002-E04-02,Forecasting (ARIMA_PLUS / TimesFM),"Horizonte 3-4 meses; RMSE < 10 %; activa UC-03.
+Dependencias: HBE0002-E03-03
+Items abiertos: —
+Spike: No",,Machine Learning y modelos (BigQuery ML),Alta,8,bqml forecasting timesfm,ML-AI,Chema
+Story,HBE0002-E04-03,Clustering KMeans de hoteles,"Recalculado semanalmente; silueta > 0.5; activa UC-04.
+Dependencias: HBE0002-E03-03
+Items abiertos: —
+Spike: No",,Machine Learning y modelos (BigQuery ML),Media,5,bqml clustering kmeans,ML-AI,Chema
+Story,HBE0002-E04-04,Pipeline de reentrenamiento (daily/weekly),"Metricas logged en BigQuery; orquestado por Cloud Workflows.
+Dependencias: HBE0002-E04-01, HBE0002-E04-02, HBE0002-E04-03
+Items abiertos: —
+Spike: No",,Machine Learning y modelos (BigQuery ML),Media,5,bqml mlops,ML-AI,Chema
+Story,HBE0002-E04-05,Publicacion de modelos a Platinum,"gold.kpi_anomalies, gold.kpi_forecast, gold.hotel_clusters pobladas con cadencia acordada.
+Dependencias: HBE0002-E04-04, HBE0002-E03-04
+Items abiertos: —
+Spike: No",,Machine Learning y modelos (BigQuery ML),Alta,3,bqml serving,"ML-AI,Data-Eng",Chema
+Story,HBE0002-E05-01,Integracion con Slack (webhook + Bot API),"Canales #data-alerts, #forecast-warnings, #data-ops-logs; secrets en Secret Manager.
+Dependencias: HBE0002-E07-03
+Items abiertos: —
+Spike: No",,Sistema de alertas (Slack + Cloud Workflows),Alta,3,slack integration,Data-Eng,Belen
+Story,HBE0002-E05-02,Notificacion de anomalias (Cloud Function),"UC-01: payload con hotel, metrica, comparativa L7D/L4W/YoY; gating por priorizacion.
+Dependencias: HBE0002-E04-01, HBE0002-E05-01
+Items abiertos: S-11
+Spike: No",,Sistema de alertas (Slack + Cloud Workflows),Alta,5,slack anomaly,"Data-Eng,ML-AI",Belen
+Story,HBE0002-E05-03,Notificacion de forecasting vs. budget,"UC-03: alerta proactiva si proyeccion < budget +/-10 %; evaluar adjuntar grafico.
+Dependencias: HBE0002-E04-02, HBE0002-E05-01
+Items abiertos: —
+Spike: No",,Sistema de alertas (Slack + Cloud Workflows),Alta,5,slack forecast,Data-Eng,Belen
+Story,HBE0002-E05-04,Alertas de pipeline (Workflows + Logging),"CRITICAL detiene pipeline y notifica al equipo tecnico Roiback; WARNING a #data-ops-logs.
+Dependencias: HBE0002-E03-05, HBE0002-E03-06
+Items abiertos: —
+Spike: No",,Sistema de alertas (Slack + Cloud Workflows),Media,3,pipeline alerts,"DevOps,Observability",Juan
+Story,HBE0002-E05-05,Dashboard historico de alertas,"Ultimos 30 dias por hotel/cadena/metrica para evaluar falsos positivos.
+Dependencias: HBE0002-E06-02
+Items abiertos: —
+Spike: No",,Sistema de alertas (Slack + Cloud Workflows),Media,3,alerts dashboard,Observability,Belen
+Story,HBE0002-E06-01,Cloud Logging centralizado,"Dataform, Workflows, Cloud Functions -> Cloud Logging; auditoria Cloud Audit Logs.
+Dependencias: —
+Items abiertos: S-13
+Spike: No",,"Observabilidad, monitorizacion y FinOps",Media,3,logging,"DevOps,Observability",Juan
+Story,HBE0002-E06-02,Dashboards Cloud Monitoring,"Pipelines Health, Data Quality, Infrastructure, FinOps.
+Dependencias: HBE0002-E06-01
+Items abiertos: —
+Spike: No",,"Observabilidad, monitorizacion y FinOps",Media,5,monitoring dashboards,"DevOps,Observability",Juan
+Story,HBE0002-E06-03,"Alertas operativas (error rate, latencia)","Slack notifications; matriz de severidades CRITICAL/WARNING.
+Dependencias: HBE0002-E06-02
+Items abiertos: —
+Spike: No",,"Observabilidad, monitorizacion y FinOps",Media,3,alerting,"DevOps,Observability",Juan
+Story,HBE0002-E06-04,Analisis de costes y benchmarking on-demand vs Editions,"Desglose INFORMATION_SCHEMA.JOBS_BY_PROJECT; pruebas con cuentas chica/mediana/grande.
+Dependencias: HBE0002-E12-04
+Items abiertos: S-16, S-17, S-18, D-17, D-18, D-19, D-20
+Spike: No",,"Observabilidad, monitorizacion y FinOps",Alta,5,finops cost-analysis,FinOps,Daniel
+Story,HBE0002-E06-05,Presupuestos y alertas de FinOps,"Budgets por entorno; alertas 50/90/100 %.
+Dependencias: HBE0002-E06-04
+Items abiertos: S-16, S-17
+Spike: No",,"Observabilidad, monitorizacion y FinOps",Media,2,finops budgets,FinOps,Daniel
+Story,HBE0002-E06-06,Runbook de observabilidad e incidentes,"SLA, escalado, on-call, contactos.
+Dependencias: HBE0002-E06-01, HBE0002-E06-02
+Items abiertos: S-01
+Spike: No",,"Observabilidad, monitorizacion y FinOps",Media,3,runbook,"DevOps,Documentation",Juan
+Story,HBE0002-E07-01,Matriz de roles IAM TO-BE,"Grupos data-engineers, analysts-dcs, ml-engineers, devops-team, business-users; permisos minimo privilegio.
+Dependencias: HBE0002-E12-03
+Items abiertos: D-07, D-08, D-09, S-08
+Spike: No",,"Seguridad, IAM y cumplimiento",Alta,5,iam rbac,Security,Juan
+Story,HBE0002-E07-02,Service accounts por componente/entorno,"dataform-{env}, workflows-{env}, chatbot-{env}, monitoring-{env}.
+Dependencias: HBE0002-E07-01
+Items abiertos: —
+Spike: No",,"Seguridad, IAM y cumplimiento",Alta,3,iam service-accounts,Security,Juan
+Story,HBE0002-E07-03,Google Secret Manager + rotacion,"Credenciales on-prem, Slack webhooks, claves chatbot.
+Dependencias: HBE0002-E07-02
+Items abiertos: —
+Spike: No",,"Seguridad, IAM y cumplimiento",Alta,3,secrets rotation,Security,Juan
+Story,HBE0002-E07-04,VPN HA hacia PostgreSQL y APIs on-prem,"Cloud VPN HA; pruebas de conectividad y failover.
+Dependencias: HBE0002-E02-01, HBE0002-E12-06
+Items abiertos: S-03
+Spike: No",,"Seguridad, IAM y cumplimiento",Alta,5,network vpn,"Security,Infra",Juan
+Story,HBE0002-E07-05,Firewall (VPC) y politicas de red,"Ingress/egress restrictivos; documentacion de aperturas.
+Dependencias: HBE0002-E02-01
+Items abiertos: —
+Spike: No",,"Seguridad, IAM y cumplimiento",Media,3,network firewall,Security,Juan
+Story,HBE0002-E07-06,Cloud Audit Logs + evidencias de cumplimiento,"Audit logs habilitados; retencion GDPR.
+Dependencias: HBE0002-E06-01
+Items abiertos: S-13
+Spike: No",,"Seguridad, IAM y cumplimiento",Media,5,audit gdpr,"Security,Governance",Juan
+Story,HBE0002-E07-07,Politicas de cumplimiento + glass-breaker,"Acceso de emergencia, residencia del dato, matriz GDPR.
+Dependencias: HBE0002-E07-01
+Items abiertos: S-09, S-12
+Spike: No",,"Seguridad, IAM y cumplimiento",Media,3,compliance policy,"Security,PM",Daniel
+Story,HBE0002-E08-01,ERD + esquema Gold para UC-02,"Tablas fact_daily_summary, dim_hotel_comparison; campos TTV, RN, Reservas, Forecast, Anomalia.
+Dependencias: HBE0002-E03-03, HBE0002-E12-05
+Items abiertos: S-05, S-06
+Spike: No",,Dashboard integral de reunion (UC-02),Alta,5,bi data-modeling,"BI,Data-Eng",Belen
+Story,HBE0002-E08-02,Agregados y vistas BI,"Comparativas L7D vs L4W vs YoY; historico de anomalias 30 dias.
+Dependencias: HBE0002-E08-01
+Items abiertos: —
+Spike: No",,Dashboard integral de reunion (UC-02),Alta,5,bi sql-views,"BI,Data-Eng",Belen
+Story,HBE0002-E08-03,Dashboard Looker Studio (UC-02),"5+ visualizaciones; filtros por hotel/cadena/periodo; aprobacion con DCS.
+Dependencias: HBE0002-E08-02
+Items abiertos: —
+Spike: No",,Dashboard integral de reunion (UC-02),Alta,5,looker-studio dashboard,BI,Belen
+Story,HBE0002-E08-04,Integracion del resumen de IA en el dashboard,"Llamada al chatbot con resumen contextual de trafico/ventas/anomalias/forecast.
+Dependencias: HBE0002-E09-02, HBE0002-E05-02, HBE0002-E04-02
+Items abiertos: —
+Spike: No",,Dashboard integral de reunion (UC-02),Media,5,bi ai-integration,"BI,ML-AI",Chema
+Story,HBE0002-E09-01,Arquitectura del agente conversacional,"Spike: elegir LLM (Vertex AI / Claude / Gemini) y patron RAG sobre BigQuery; documentacion de flujo.
+Dependencias: —
+Items abiertos: —
+Spike: Si",,Asistente conversacional (UC-05),Media,3,ai architecture spike,ML-AI,Chema
+Story,HBE0002-E09-02,Backend del chatbot (Cloud Run),"Servicio REST con verificacion de fuente (source_table, query_timestamp, confidence).
+Dependencias: HBE0002-E03-04, HBE0002-E09-01
+Items abiertos: —
+Spike: No",,Asistente conversacional (UC-05),Media,8,cloud-run chatbot,"ML-AI,Data-Eng",Chema
+Story,HBE0002-E09-03,Integracion con Slack (Bot App),"Comandos/menciones, rate limiting, manejo de errores.
+Dependencias: HBE0002-E09-02
+Items abiertos: —
+Spike: No",,Asistente conversacional (UC-05),Media,5,slack-bot,ML-AI,Chema
+Story,HBE0002-E09-04,Validacion de respuestas y ground truth,"Conjunto de 10 queries validadas con DCS; medicion de precision.
+Dependencias: HBE0002-E09-02
+Items abiertos: —
+Spike: No",,Asistente conversacional (UC-05),Media,3,ai qa,"ML-AI,QA",Chema
+Story,HBE0002-E10-01,Test suites unitarios Dataform,"Test suites unitarios Dataform.
+Dependencias: HBE0002-E03-07
+Items abiertos: —
+Spike: No",,"Validacion, testing y UAT",Media,3,qa unit,"QA,Data-Eng",Belen
+Story,HBE0002-E10-02,Pruebas de integracion end-to-end,"Pipeline Bronze -> Silver -> Gold -> BI con datos reales.
+Dependencias: HBE0002-E03-05
+Items abiertos: —
+Spike: No",,"Validacion, testing y UAT",Alta,5,qa integration,QA,Belen
+Story,HBE0002-E10-03,Pruebas de calidad del dato,"Pruebas de calidad del dato.
+Dependencias: HBE0002-E01-03
+Items abiertos: —
+Spike: No",,"Validacion, testing y UAT",Alta,5,qa data-quality,"QA,Governance",Belen
+Story,HBE0002-E10-04,Pruebas de carga y rendimiento,"Tiempos de query objetivo < 2 minutos para volumenes esperados.
+Dependencias: HBE0002-E03-03, HBE0002-E12-01
+Items abiertos: S-02
+Spike: No",,"Validacion, testing y UAT",Media,5,qa performance,QA,Juan
+Story,HBE0002-E10-05,Pruebas de seguridad e IAM,"Pruebas de seguridad e IAM.
+Dependencias: HBE0002-E07-01
+Items abiertos: —
+Spike: No",,"Validacion, testing y UAT",Alta,5,qa security,"QA,Security",Juan
+Story,HBE0002-E10-06,UAT con grupo piloto DCS (4-5 personas),"Sign-off Roiback sobre UC-01, UC-02, UC-03.
+Dependencias: HBE0002-E05-02, HBE0002-E08-04, HBE0002-E04-01, HBE0002-E04-02, HBE0002-E04-03
+Items abiertos: —
+Spike: No",,"Validacion, testing y UAT",Alta,8,qa uat,"QA,PM",Daniel
+Story,HBE0002-E11-01,Documento de arquitectura final,"Documento de arquitectura final.
+Dependencias: —
+Items abiertos: —
+Spike: No",,Documentacion y handover,Media,5,documentation architecture,"Documentation,PM",Daniel
+Story,HBE0002-E11-02,Runbooks operativos,"Pipeline failure, DQ alert, cost spike, Dataform deploy, chatbot debugging.
+Dependencias: HBE0002-E05-04, HBE0002-E06-06
+Items abiertos: —
+Spike: No",,Documentacion y handover,Media,5,documentation runbooks,"Documentation,DevOps",Juan
+Story,HBE0002-E11-03,Glosario de negocio final (Dataplex),"Glosario de negocio final (Dataplex).
+Dependencias: HBE0002-E01-01
+Items abiertos: —
+Spike: No",,Documentacion y handover,Media,3,documentation glossary,"Documentation,Governance",Belen
+Story,HBE0002-E11-04,Onboarding equipo tecnico Roiback (3 sesiones),"Onboarding equipo tecnico Roiback (3 sesiones).
+Dependencias: HBE0002-E11-01, HBE0002-E11-02
+Items abiertos: —
+Spike: No",,Documentacion y handover,Alta,5,documentation handover training,PM,Daniel
+Story,HBE0002-E11-05,Notebooks de ejemplo (Jupyter),"Notebooks de ejemplo (Jupyter).
+Dependencias: HBE0002-E03-03, HBE0002-E04-01, HBE0002-E09-02
+Items abiertos: —
+Spike: No",,Documentacion y handover,Baja,3,documentation notebooks,"Documentation,ML-AI",Chema
+Story,HBE0002-E12-01,"SPIKE Volumetria (bookings, GA4, on-prem)","SPIKE Volumetria (bookings, GA4, on-prem).
+Dependencias: —
+Items abiertos: D-02, D-03, S-01, S-02, S-03
+Spike: Si",,Spikes y decisiones pendientes,Alta,3,spike volumetry,"PM,Data-Eng",Belen
+Story,HBE0002-E12-02,SPIKE Decision de region (EU vs europe-west1),"SPIKE Decision de region (EU vs europe-west1).
+Dependencias: —
+Items abiertos: S-10
+Spike: Si",,Spikes y decisiones pendientes,Alta,2,spike region,"PM,Architecture",Daniel
+Story,HBE0002-E12-03,SPIKE Taller de seguridad e IAM,"SPIKE Taller de seguridad e IAM.
+Dependencias: —
+Items abiertos: D-07, D-08, D-09, S-08, S-09
+Spike: Si",,Spikes y decisiones pendientes,Alta,3,spike security,"PM,Security",Juan
+Story,HBE0002-E12-04,SPIKE Analisis de costes detallado,"SPIKE Analisis de costes detallado.
+Dependencias: —
+Items abiertos: S-16, S-17, S-18, D-17, D-18, D-19, D-20
+Spike: Si",,Spikes y decisiones pendientes,Alta,3,spike finops,"PM,FinOps",Daniel
+Story,HBE0002-E12-05,SPIKE Definicion de KPIs y esquema Gold,"SPIKE Definicion de KPIs y esquema Gold.
+Dependencias: —
+Items abiertos: S-05, S-06
+Spike: Si",,Spikes y decisiones pendientes,Alta,3,spike data-modeling,"PM,Data-Eng",Chema
+Story,HBE0002-E12-06,SPIKE Estrategia on-premise (PostgreSQL + APIs),"SPIKE Estrategia on-premise (PostgreSQL + APIs).
+Dependencias: —
+Items abiertos: S-03
+Spike: Si",,Spikes y decisiones pendientes,Media,3,spike integration,"PM,Infra",Juan
